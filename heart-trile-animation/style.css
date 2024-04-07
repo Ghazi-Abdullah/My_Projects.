@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+}
+
+/*heart-tril-animation*/
+span{
+    background: url("https://cdn0.iconfinder.com/data/icons/social-reaction-and-emoji/519/love-256.png");
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    pointer-events:none ;
+    background-size: cover;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+
+    /*راح يحذف القلب كل 6 ثواني*/
+    animation: animate 6s linear;
+}
+
+/*انشاء الانيميشن*/
+@keyframes animate{
+    0%{
+        /*راح يصير يطبع خارج الصفحة حر يعني*/
+        transform: translate(-50% , -50%);
+        opacity: 1;
+        filter: hue-rotate(0);
+    }
+
+    100%{
+        transform: translate(-50% , -5000%);
+        opacity: 1;
+        filter: hue-rotate(720deg);
+    }
+}
